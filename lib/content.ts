@@ -11,11 +11,11 @@ export const profile = {
   github: "https://github.com/waleedsimmings",
   resume: "/Waleed-Tahir-CV.pdf",
   summary:
-    "Full-stack engineer with commercial Next.js, React, and TypeScript experience on production web and commerce platforms. I adopt an existing codebase, extend it for new requirements, and integrate payment gateways, APIs, and third-party services.",
+    "Senior full-stack engineer building production web and commerce products with Next.js, React, TypeScript, and Node.js. I take work from interface to API, payments, and cloud, and I have led a 12-engineer team through delivery.",
 };
 
 export const nav = [
-  { href: "#approach", label: "Approach" },
+  { href: "#approach", label: "Focus" },
   { href: "#work", label: "Work" },
   { href: "#experience", label: "Experience" },
   { href: "#skills", label: "Skills" },
@@ -26,7 +26,7 @@ export const snapshot = [
   { label: "Now", value: "Senior Software Engineer, Newcleux" },
   { label: "Based", value: "Islamabad · remote-ready" },
   { label: "Stack", value: "Next.js, React, TypeScript, Node.js" },
-  { label: "Focus", value: "APIs, payments, realtime product work" },
+  { label: "Focus", value: "Products, APIs, payments, cloud" },
 ];
 
 export const ticker = [
@@ -47,18 +47,18 @@ export const ticker = [
 export const principles = [
   {
     number: "01",
-    title: "Extend what already runs",
-    body: "I join the codebase that is in production and adapt its components, services, and patterns for the next requirement.",
+    title: "Build the product",
+    body: "Next.js and React products: storefronts, admin dashboards, realtime chat, and trading interfaces used in production.",
   },
   {
     number: "02",
-    title: "Connect the outside world",
-    body: "Payments, inbound email, webhooks, analytics, and third-party APIs land inside the architecture that already exists.",
+    title: "Build the services",
+    body: "Node.js APIs, GraphQL and REST, payments, webhooks, and data pipelines that those products actually run on.",
   },
   {
     number: "03",
-    title: "Leave it shippable",
-    body: "Agile delivery with distributed product and engineering teams. Reviews, mentoring, and changes that stay reusable for the next release.",
+    title: "Lead the delivery",
+    body: "A 12-engineer Agile team, AWS architecture, code review, and mentoring through to production deploys.",
   },
 ];
 
@@ -77,11 +77,11 @@ export const featured: CaseStudy[] = [
     org: "Senior Software Engineer",
     period: "Mar 2026 — Present · Abu Dhabi, remote",
     summary:
-      "Extending a live platform with React, TypeScript, and Node.js. Frontend journeys stay wired to backend APIs and external services, with production debugging shared across product, UI, and backend.",
+      "Senior engineer on a production platform, building React, TypeScript, and Node.js features across the UI, APIs, and third-party services.",
     points: [
-      "Adapting current components and services for new requirements",
-      "Real-time, context-aware flows inside an established architecture",
-      "Reusable changes a later release can build on",
+      "Real-time, context-aware user journeys from frontend to backend",
+      "Production APIs and web flows shipped with product, UI, and backend engineers",
+      "Features designed so the next release can build on them",
     ],
     stack: ["React", "TypeScript", "Node.js", "REST"],
   },
@@ -90,7 +90,7 @@ export const featured: CaseStudy[] = [
     org: "Backend Team Lead",
     period: "Jan 2025 — Mar 2026 · South Bay, remote",
     summary:
-      "Led a 12-engineer Agile team on an established product: planning, code review, mentoring, and production deploys. The live platform scaled on a multi-instance AWS setup with Redis, without a rewrite.",
+      "Backend team lead for 12 engineers: planning, code review, mentoring, and production deploys. Designed the multi-instance AWS and Redis architecture the platform runs on.",
     points: [
       "Ready Player Me, Twilio, and AWS webhooks beside GraphQL and REST",
       "EC2, ECS, and Lambda with Redis for cache, sessions, and cross-instance sync",
@@ -106,7 +106,7 @@ export const work: CaseStudy[] = [
     org: "Codistan Ventures",
     period: "2024 — 2025",
     summary:
-      "Production Next.js platform and admin dashboard, including full chat, connected to Node.js, MongoDB, and AWS along the product’s existing patterns.",
+      "Built a production Next.js platform and admin dashboard, including full chat, on Node.js, MongoDB, and AWS.",
     stack: ["Next.js", "React", "Node.js", "MongoDB", "AWS"],
   },
   {
@@ -114,7 +114,7 @@ export const work: CaseStudy[] = [
     org: "Codistan Ventures",
     period: "2024 — 2025",
     summary:
-      "Real-time Next.js trading web app across Twitter, Reddit, and Binance. API contract changes, error states, and production debugging included.",
+      "Built a real-time Next.js trading app on Twitter, Reddit, and Binance, including API changes, error states, and production debugging.",
     stack: ["Next.js", "Binance", "Twitter", "Reddit"],
   },
   {
@@ -122,7 +122,7 @@ export const work: CaseStudy[] = [
     org: "DevStarX",
     period: "2023 — 2024",
     summary:
-      "Storefront and admin UI on Prisma and Medusa. Commerce functionality wired to REST services, with Google Analytics and client-specific enhancements where they were needed.",
+      "Built the StratFinder storefront and admin on Next.js, TypeScript, Prisma, and Medusa, with commerce APIs and Google Analytics.",
     stack: ["Next.js", "TypeScript", "Prisma", "Medusa"],
   },
   {
@@ -138,7 +138,7 @@ export const work: CaseStudy[] = [
     org: "K2X Technologies",
     period: "2022 — 2023",
     summary:
-      "API-driven Sankey visualizations of energy flow across 16 countries, built from Excel data. Acted as product owner and adapted the data and UI for multi-market use.",
+      "Built API-driven Sankey visualizations of energy flow across 16 countries from Excel data, and owned the product for multi-market use.",
     stack: ["APIs", "Data viz", "Sankey"],
   },
   {
@@ -146,7 +146,7 @@ export const work: CaseStudy[] = [
     org: "Codistan Ventures",
     period: "2024 — 2025",
     summary:
-      "SendGrid Inbound Parse and Firebase Functions ingest external email and PDF data, persist it in MySQL, and run Redis background jobs.",
+      "Built an email and PDF intake pipeline: SendGrid Inbound Parse and Firebase Functions into MySQL, with Redis background jobs.",
     stack: ["SendGrid", "Firebase", "MySQL", "Redis"],
   },
 ];
@@ -168,9 +168,9 @@ export const experience: Role[] = [
     place: "Abu Dhabi, UAE (Remote)",
     current: true,
     points: [
-      "Extending an existing production platform with React, TypeScript, and Node.js — adapting current components and services for new requirements.",
-      "Integrating frontend UI with backend APIs and third-party services for real-time, context-aware user journeys.",
-      "Debugging and shipping production APIs and web flows with a distributed team of product, UI, and backend engineers.",
+      "Building production features with React, TypeScript, and Node.js across UI, APIs, and third-party services.",
+      "Shipping real-time, context-aware user journeys from the frontend through backend APIs.",
+      "Debugging and releasing production APIs and web flows with product, UI, and backend engineers.",
     ],
   },
   {
@@ -194,7 +194,7 @@ export const experience: Role[] = [
       "Report website: SendGrid Inbound Parse and Firebase Functions ingest email and PDF data into MySQL, with Redis background jobs.",
       "Campsite: delivered a production Next.js platform and admin dashboard with full chat on Node.js, MongoDB, and AWS.",
       "Parabolic: built a real-time Next.js trading app integrating Twitter, Reddit, and Binance, including contract changes and error states.",
-      "Implemented subscription billing and payment flows in Next.js as targeted enhancements inside the existing codebase.",
+      "Built subscription billing and payment flows in Next.js.",
     ],
   },
   {
@@ -205,7 +205,7 @@ export const experience: Role[] = [
     points: [
       "Built production Next.js, React, and TypeScript features for StratFinder on Prisma and Medusa — storefront and admin UI wired to commerce APIs.",
       "Integrated commerce functionality with REST services, Medusa, and Google Analytics.",
-      "Worked inside an established product architecture with clients and internal engineers, focused on maintainable TypeScript.",
+      "Shipped maintainable TypeScript with clients and internal engineers.",
     ],
   },
   {

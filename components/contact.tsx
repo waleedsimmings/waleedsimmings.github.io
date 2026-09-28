@@ -6,7 +6,7 @@ export function Contact() {
       <section className="section contact" id="contact" aria-labelledby="contact-title">
         <div className="wrap">
           <p className="eyebrow">05 — Contact</p>
-          <h2 id="contact-title">Tell me what the system needs next.</h2>
+          <h2 id="contact-title">Let’s talk about the next product.</h2>
           <a className="email" href={`mailto:${profile.email}`}>
             {profile.email}
           </a>

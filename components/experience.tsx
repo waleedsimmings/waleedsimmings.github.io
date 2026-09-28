@@ -10,7 +10,7 @@ export function Experience() {
             <h2 id="experience-title">Roles</h2>
           </div>
           <p className="section-lead">
-            From an Express internship in Peshawar to senior product engineering, mostly on systems that were already live.
+            From an Express internship in Peshawar to senior product engineering and a backend team lead role.
           </p>
         </header>
 

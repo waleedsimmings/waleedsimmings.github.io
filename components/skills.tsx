@@ -10,7 +10,7 @@ export function Skills() {
             <h2 id="skills-title">Tools in production</h2>
           </div>
           <p className="section-lead">
-            The stack behind the platforms above — frontend, services, data, and the cloud pieces that keep them running.
+            Frontend, services, data, and cloud — the tools behind the products above.
           </p>
         </header>
 

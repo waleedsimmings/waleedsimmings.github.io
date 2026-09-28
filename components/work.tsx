@@ -6,11 +6,11 @@ export function Approach() {
       <div className="wrap">
         <header className="section-head">
           <div>
-            <p className="eyebrow">01 — Approach</p>
-            <h2 id="approach-title">How the work actually lands</h2>
+            <p className="eyebrow">01 — Focus</p>
+            <h2 id="approach-title">What I build</h2>
           </div>
           <p className="section-lead">
-            Commercial product work, usually inside a system that already has users, data, and a release cadence.
+            Full-stack product work: the interface, the APIs and payments behind it, and the team that ships it.
           </p>
         </header>
         <ol className="principles">
@@ -36,10 +36,10 @@ export function Work() {
         <header className="section-head">
           <div>
             <p className="eyebrow">02 — Work</p>
-            <h2 id="work-title">Selected systems</h2>
+            <h2 id="work-title">Selected work</h2>
           </div>
           <p className="section-lead">
-            Platforms led in production, and the named products shipped around them. Client work stays described here, with the stack that carried it.
+            Products and platforms I have designed, built, and shipped — commerce, trading, chat, data, and team-scale backends.
           </p>
         </header>
 
