@@ -28,7 +28,7 @@ export function Contact() {
               linkedin.com/in/waleed-tahir ↗
             </a>
             <a href={profile.github} target="_blank" rel="noreferrer" className="transition-colors hover:text-accent">
-              github.com/waleedsimmings ↗
+              github.com/itswaleedtahir ↗
             </a>
             <a href={profile.resume} download className="transition-colors hover:text-accent">
               Download CV ↗

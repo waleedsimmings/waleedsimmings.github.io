@@ -9,7 +9,7 @@ export const profile = {
   phone: "+92 335 9495771",
   phoneHref: "tel:+923359495771",
   linkedin: "https://www.linkedin.com/in/waleed-tahir",
-  github: "https://github.com/waleedsimmings",
+  github: "https://github.com/itswaleedtahir",
   resume: "/Waleed-Tahir-CV.pdf",
   heroLine: "Products, engineered.",
   heroTags: "Next.js · React · Node.js · AWS",
@@ -71,7 +71,7 @@ export const about = {
     },
     {
       label: "GitHub",
-      value: "github.com/waleedsimmings ↗",
+      value: "github.com/itswaleedtahir ↗",
       href: profile.github,
       external: true,
     },

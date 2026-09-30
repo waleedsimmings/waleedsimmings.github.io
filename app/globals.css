@@ -5,8 +5,8 @@
 :root {
   --color-ink: 16 17 18;
   --color-paper: 247 248 249;
-  --color-heading: 16 17 18;
-  --color-heading-accent: 168 255 36;
+  --heading-rgb: 16 17 18;
+  --heading-accent-rgb: 168 255 36;
   --color-accent: 168 255 36;
   --color-muted: 104 112 120;
   --color-border: 223 228 231;
@@ -23,8 +23,8 @@
 .dark {
   --color-ink: 240 245 241;
   --color-paper: 10 16 12;
-  --color-heading: 168 255 36;
-  --color-heading-accent: 240 245 241;
+  --heading-rgb: 168 255 36;
+  --heading-accent-rgb: 240 245 241;
   --color-accent: 168 255 36;
   --color-muted: 166 178 170;
   --color-border: 46 61 51;
@@ -41,8 +41,8 @@
 @theme inline {
   --color-ink: rgb(var(--color-ink) / <alpha-value>);
   --color-paper: rgb(var(--color-paper) / <alpha-value>);
-  --color-heading: rgb(var(--color-heading) / <alpha-value>);
-  --color-heading-accent: rgb(var(--color-heading-accent) / <alpha-value>);
+  --color-heading: rgb(var(--heading-rgb) / <alpha-value>);
+  --color-heading-accent: rgb(var(--heading-accent-rgb) / <alpha-value>);
   --color-accent: rgb(var(--color-accent) / <alpha-value>);
   --color-muted: rgb(var(--color-muted) / <alpha-value>);
   --color-border: rgb(var(--color-border) / <alpha-value>);
@@ -141,6 +141,15 @@ body {
 
 .pulse-dot {
   animation: 2s infinite pulse-dot;
+}
+
+/* Display headings: lime on dark (Tailwind tokens use --heading-rgb above). */
+.dark .text-heading {
+  color: rgb(var(--heading-rgb));
+}
+
+.dark .text-heading-accent {
+  color: rgb(var(--heading-accent-rgb));
 }
 
 .sr-only {
