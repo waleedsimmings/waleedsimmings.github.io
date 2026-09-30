@@ -5,24 +5,24 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-[920px] overflow-hidden px-5 pb-10 pt-28 md:px-10 lg:min-h-screen xl:px-[4.5vw]"
+      className="relative overflow-x-hidden px-5 pb-14 pt-[6.25rem] sm:pt-32 md:px-10 md:min-h-[920px] lg:min-h-screen xl:px-[4.5vw]"
       aria-labelledby="hero-title"
     >
       <div className="absolute inset-x-0 top-0 h-px bg-surface" aria-hidden="true" />
 
-      <div className="grid min-h-[700px] grid-cols-1 items-center gap-6 lg:grid-cols-[1.03fr_0.97fr]">
-        <div className="relative z-20 pt-8 lg:pt-0">
+      <div className="grid grid-cols-1 items-start gap-8 lg:min-h-[700px] lg:grid-cols-[1.03fr_0.97fr] lg:items-center lg:gap-6">
+        <div className="relative z-10 pt-2 lg:z-20 lg:pt-0">
           <p className="mb-4 flex items-center gap-3 text-[0.72rem] font-medium uppercase tracking-[0.14em] text-muted">
             <span className="block h-px w-7 bg-accent" aria-hidden="true" />
             {profile.role}
           </p>
           <h1
             id="hero-title"
-            className="font-display text-[clamp(3.5rem,11vw,7.5rem)] font-black uppercase leading-[0.82] tracking-[-0.075em] text-ink"
+            className="font-display text-[clamp(2.85rem,12vw,7.5rem)] font-black uppercase leading-[0.86] tracking-[-0.075em] text-heading sm:text-[clamp(3.5rem,11vw,7.5rem)] sm:leading-[0.82]"
           >
             {profile.firstName}
             <br />
-            <span className="text-accent [text-shadow:0_1px_0_#6ca600]">{profile.lastName}.</span>
+            <span className="text-heading-accent">{profile.lastName}.</span>
           </h1>
           <p className="mt-8 max-w-[48ch] text-[0.95rem] font-light leading-relaxed text-muted md:text-base">
             {profile.summary}
@@ -57,9 +57,9 @@ export function Hero() {
           </p>
         </div>
 
-        <div className="relative z-10 mt-2 h-[560px] sm:h-[650px] lg:mt-0 lg:h-[760px]">
-          <div className="absolute inset-x-[8%] bottom-8 top-0">
-            <div className="hero-ring portrait-panel relative mx-auto h-full max-h-[560px] w-full max-w-[560px] overflow-hidden rounded-[2rem] lg:max-h-[760px] lg:max-w-[560px]">
+        <div className="relative z-20 mt-2 flex w-full flex-col items-center lg:mt-0 lg:block lg:h-[760px]">
+          <div className="relative w-[92%] max-w-[560px] sm:w-[84%] lg:absolute lg:inset-x-[8%] lg:bottom-8 lg:top-0">
+            <div className="hero-ring portrait-panel relative mx-auto aspect-[4/5] w-full max-w-[560px] overflow-hidden rounded-[2rem] sm:aspect-auto sm:h-[min(72vh,560px)] lg:h-full lg:max-h-[760px]">
               <div className="pointer-events-none absolute inset-0 z-10 bg-[radial-gradient(circle_at_50%_100%,#a8ff2418,transparent_55%)]" />
               <Image
                 src="/waleed-portrait.jpeg"
@@ -72,7 +72,7 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="glass-card absolute right-0 top-24 z-20 w-44 rounded-2xl p-4 sm:right-4">
+          <div className="glass-card relative z-20 mt-4 w-full max-w-[17rem] rounded-2xl p-4 sm:max-w-[11rem] lg:absolute lg:right-4 lg:top-24 lg:mt-0 lg:w-44">
             <p className="text-[0.58rem] uppercase tracking-[0.14em] text-muted">Available for</p>
             <p className="mt-1 font-black uppercase text-accent">{heroCard.availability}</p>
             <div className="mt-3 flex items-center justify-between text-[0.62rem] uppercase tracking-wider">

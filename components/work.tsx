@@ -9,8 +9,8 @@ export function Work() {
     >
       <div className="mx-auto max-w-7xl">
         <p className="text-[0.72rem] font-medium uppercase tracking-[0.14em] text-accent">02 — Selected work</p>
-        <h2 id="work-title" className="mt-4 font-display text-[clamp(2.2rem,5vw,3.75rem)] font-black leading-[1.1] tracking-tight">
-          Products I&apos;ve <span className="italic text-accent">built</span>
+        <h2 id="work-title" className="mt-4 font-display text-[clamp(2.2rem,5vw,3.75rem)] font-black leading-[1.1] tracking-tight text-heading">
+          Products I&apos;ve <span className="italic text-heading-accent">built</span>
           <br />
           and shipped.
         </h2>
@@ -38,7 +38,7 @@ function ProductCard({ item, featured = false }: { item: CaseStudy; featured?: b
   const inner = (
     <>
       <p className="text-[0.62rem] font-black uppercase tracking-widest text-accent">{item.org}</p>
-      <h3 className={`mt-3 font-display font-black tracking-tight text-paper ${featured ? "text-3xl" : "text-2xl"}`}>
+      <h3 className={`mt-3 font-display font-black tracking-tight text-heading ${featured ? "text-3xl" : "text-2xl"}`}>
         {item.name}
       </h3>
       <p className="mt-1 text-[0.68rem] uppercase tracking-wider text-paper/45">{item.period}</p>

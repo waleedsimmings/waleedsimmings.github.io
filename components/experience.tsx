@@ -5,8 +5,8 @@ export function Experience() {
     <section id="experience" className="bg-paper px-6 py-24 md:px-10 xl:px-[6vw]" aria-labelledby="experience-title">
       <div className="mx-auto max-w-7xl">
         <p className="text-[0.72rem] font-medium uppercase tracking-[0.14em] text-accent">03 — Experience</p>
-        <h2 id="experience-title" className="mt-4 font-display text-[clamp(2.2rem,5vw,3.75rem)] font-black leading-[1.1] tracking-tight text-ink">
-          Where I&apos;ve <span className="italic text-accent">built</span>
+        <h2 id="experience-title" className="mt-4 font-display text-[clamp(2.2rem,5vw,3.75rem)] font-black leading-[1.1] tracking-tight text-heading">
+          Where I&apos;ve <span className="italic text-heading-accent">built</span>
           <br />
           things that matter.
         </h2>
@@ -20,7 +20,7 @@ export function Experience() {
               </div>
               <div>
                 <p className="text-[0.62rem] font-black uppercase tracking-widest text-accent">{role.org}</p>
-                <h3 className="mt-2 font-display text-2xl font-black text-ink md:text-3xl">{role.title}</h3>
+                <h3 className="mt-2 font-display text-2xl font-black text-heading md:text-3xl">{role.title}</h3>
                 {role.summary ? <p className="mt-3 max-w-[62ch] text-sm font-light leading-relaxed text-muted">{role.summary}</p> : null}
                 <ul className="mt-5 space-y-2 text-sm font-light text-muted">
                   {role.points.map((point) => (

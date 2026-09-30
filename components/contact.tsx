@@ -6,8 +6,8 @@ export function Contact() {
       <section id="contact" className="bg-paper px-6 py-24 text-center md:px-10 xl:px-[6vw]" aria-labelledby="contact-title">
         <div className="mx-auto max-w-3xl">
           <p className="text-[0.72rem] font-medium uppercase tracking-[0.14em] text-accent">08 — Contact</p>
-          <h2 id="contact-title" className="mt-4 font-display text-[clamp(2.2rem,5vw,3.75rem)] font-black leading-[1.1] tracking-tight text-ink">
-            Ready to <span className="italic text-accent">build</span>
+          <h2 id="contact-title" className="mt-4 font-display text-[clamp(2.2rem,5vw,3.75rem)] font-black leading-[1.1] tracking-tight text-heading">
+            Ready to <span className="italic text-heading-accent">build</span>
             <br />
             something great?
           </h2>
@@ -16,7 +16,7 @@ export function Contact() {
           </p>
           <a
             href={`mailto:${profile.email}`}
-            className="mt-10 inline-block font-display text-2xl font-black text-ink underline decoration-accent/50 underline-offset-8 transition-colors hover:text-accent md:text-4xl"
+            className="mt-10 inline-block font-display text-2xl font-black text-heading underline decoration-accent/50 underline-offset-8 transition-colors hover:text-heading-accent md:text-4xl"
           >
             {profile.email}
           </a>

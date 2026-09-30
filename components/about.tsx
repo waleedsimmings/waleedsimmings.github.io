@@ -27,8 +27,8 @@ export function About() {
           <span className="h-px flex-1 bg-border" />
         </div>
 
-        <h2 id="about-title" className="mt-8 font-display text-[clamp(2.2rem,5vw,3.75rem)] font-black leading-[1.1] tracking-tight">
-          The engineer who <span className="italic text-accent">ships</span>
+        <h2 id="about-title" className="mt-8 font-display text-[clamp(2.2rem,5vw,3.75rem)] font-black leading-[1.1] tracking-tight text-heading">
+          The engineer who <span className="italic text-heading-accent">ships</span>
           <br />
           end to end.
         </h2>
