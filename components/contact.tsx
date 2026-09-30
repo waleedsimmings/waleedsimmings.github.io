@@ -4,35 +4,36 @@ export function Contact() {
   return (
     <>
       <section className="section contact" id="contact" aria-labelledby="contact-title">
-        <div className="wrap">
-          <p className="eyebrow">05 — Contact</p>
-          <h2 id="contact-title">Let’s talk about the next product.</h2>
-          <a className="email" href={`mailto:${profile.email}`}>
+        <div className="wrap contact-inner">
+          <p className="section-num">08 — Contact</p>
+          <h2 id="contact-title">
+            Ready to <em>build</em>
+            <br />
+            something great?
+          </h2>
+          <p className="contact-lede">
+            Scaling a product, shipping a new feature, or need a senior full-stack engineer who owns UI through cloud — let&apos;s talk.
+          </p>
+          <a className="contact-email" href={`mailto:${profile.email}`}>
             {profile.email}
           </a>
-          <ul className="contact-links">
+          <ul className="contact-row">
+            <li>
+              <a href={profile.phoneHref}>{profile.phone}</a>
+            </li>
             <li>
               <a href={profile.linkedin} target="_blank" rel="noreferrer">
-                LinkedIn
-                <span>linkedin.com/in/waleed-tahir</span>
+                linkedin.com/in/waleed-tahir ↗
               </a>
             </li>
             <li>
               <a href={profile.github} target="_blank" rel="noreferrer">
-                GitHub
-                <span>github.com/waleedsimmings</span>
-              </a>
-            </li>
-            <li>
-              <a href={profile.phoneHref}>
-                Phone
-                <span>{profile.phone}</span>
+                github.com/waleedsimmings ↗
               </a>
             </li>
             <li>
               <a href={profile.resume} download>
-                Download CV
-                <span>PDF</span>
+                Download CV ↗
               </a>
             </li>
           </ul>
@@ -40,9 +41,9 @@ export function Contact() {
       </section>
       <footer className="footer">
         <div className="wrap footer-row">
-          <p>© {new Date().getFullYear()} Waleed Tahir</p>
+          <p>© {new Date().getFullYear()} Waleed Tahir. Products, engineered.</p>
           <p>{profile.location}</p>
-          <p>Senior FullStack Engineer</p>
+          <p>{profile.role}</p>
         </div>
       </footer>
     </>

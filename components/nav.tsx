@@ -32,8 +32,7 @@ export function Nav() {
   return (
     <header className={`nav${scrolled ? " is-scrolled" : ""}`}>
       <a className="brand" href="#top" aria-label="Waleed Tahir, back to top">
-        <span className="brand-mark">WT</span>
-        <span className="brand-name">Waleed Tahir</span>
+        WT.
       </a>
 
       <nav className="nav-links" aria-label="Primary">
@@ -45,11 +44,8 @@ export function Nav() {
       </nav>
 
       <div className="nav-end">
-        <a className="nav-social" href={profile.linkedin} target="_blank" rel="noreferrer">
-          LinkedIn
-        </a>
-        <a className="nav-social" href={profile.github} target="_blank" rel="noreferrer">
-          GitHub
+        <a className="btn btn-primary btn-nav" href="#contact">
+          Let&apos;s Talk
         </a>
         <button
           className="menu-toggle"
@@ -71,6 +67,9 @@ export function Nav() {
                 {item.label}
               </a>
             ))}
+            <a href="#contact" onClick={() => setOpen(false)}>
+              Let&apos;s Talk
+            </a>
           </nav>
           <div className="mobile-social">
             <a href={profile.linkedin} target="_blank" rel="noreferrer" onClick={() => setOpen(false)}>

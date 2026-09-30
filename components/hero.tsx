@@ -1,25 +1,21 @@
-import { profile, snapshot, ticker } from "@/lib/content";
+import { heroCard, profile, proof } from "@/lib/content";
 
 export function Hero() {
-  const loop = [...ticker, ...ticker];
-
   return (
     <section className="hero" id="top" aria-labelledby="hero-title">
-      <div className="wrap hero-body">
-        <div className="hero-copy">
-          <p className="eyebrow">
+      <div className="wrap hero-grid">
+        <div className="hero-main">
+          <p className="kicker">
             <span className="live-dot" aria-hidden="true" />
             {profile.role}
-            <span className="eyebrow-sep">·</span>
-            {profile.location}
           </p>
           <h1 id="hero-title">
-            {profile.firstName} <em>{profile.lastName}</em>
+            Shipping <em>Products.</em>
           </h1>
-          <p className="lede">{profile.summary}</p>
+          <p className="hero-lede">{profile.summary}</p>
           <div className="hero-actions">
-            <a className="btn btn-primary" href="#work">
-              Selected work
+            <a className="btn btn-primary" href="#contact">
+              Let&apos;s work together
               <Arrow />
             </a>
             <a className="btn btn-ghost" href={profile.linkedin} target="_blank" rel="noreferrer">
@@ -29,29 +25,38 @@ export function Hero() {
               GitHub
             </a>
           </div>
+          <p className="hero-locate">
+            {profile.location}
+            <span> · </span>
+            {profile.availability}
+          </p>
         </div>
 
-        <aside className="snapshot" aria-label="At a glance">
-          <p className="snapshot-kicker">At a glance</p>
-          <dl>
-            {snapshot.map((row) => (
-              <div key={row.label}>
-                <dt>{row.label}</dt>
-                <dd>{row.value}</dd>
-              </div>
-            ))}
-          </dl>
+        <aside className="hero-card" aria-label="Availability">
+          <p className="hero-card-name">{profile.name}</p>
+          <div className="hero-card-row">
+            <span className="hero-card-label">Available for</span>
+            <span className="hero-card-value">{heroCard.availability}</span>
+          </div>
+          <div className="hero-card-status">
+            <span className="live-dot" aria-hidden="true" />
+            <span>{heroCard.status}</span>
+          </div>
+          <p className="hero-card-line">{profile.heroLine}</p>
+          <p className="hero-card-tags">{profile.heroTags}</p>
         </aside>
       </div>
 
-      <div className="ticker" aria-hidden="true">
-        <div className="ticker-track">
-          <ul>
-            {loop.map((item, index) => (
-              <li key={`${item}-${index}`}>{item}</li>
-            ))}
-          </ul>
-        </div>
+      <div className="proof-strip wrap" aria-label="Highlights">
+        {proof.map((item) => (
+          <div key={item.index} className="proof-item">
+            <p className="proof-meta">
+              {item.index} {item.label}
+            </p>
+            <p className="proof-value">{item.value}</p>
+            <p className="proof-detail">{item.detail}</p>
+          </div>
+        ))}
       </div>
     </section>
   );

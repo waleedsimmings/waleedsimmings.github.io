@@ -1,75 +1,32 @@
-import { featured, principles, work, type CaseStudy } from "@/lib/content";
-
-export function Approach() {
-  return (
-    <section className="section" id="approach" aria-labelledby="approach-title">
-      <div className="wrap">
-        <header className="section-head">
-          <div>
-            <p className="eyebrow">01 — Focus</p>
-            <h2 id="approach-title">What I build</h2>
-          </div>
-          <p className="section-lead">
-            Full-stack product work: the interface, the APIs and payments behind it, and the team that ships it.
-          </p>
-        </header>
-        <ol className="principles">
-          {principles.map((item) => (
-            <li key={item.number}>
-              <span>{item.number}</span>
-              <div>
-                <h3>{item.title}</h3>
-                <p>{item.body}</p>
-              </div>
-            </li>
-          ))}
-        </ol>
-      </div>
-    </section>
-  );
-}
+import { featured, work, type CaseStudy } from "@/lib/content";
 
 export function Work() {
   return (
     <section className="section" id="work" aria-labelledby="work-title">
       <div className="wrap">
-        <header className="section-head">
+        <header className="section-intro">
           <div>
-            <p className="eyebrow">02 — Work</p>
-            <h2 id="work-title">Selected work</h2>
+            <p className="section-num">02 — Selected work</p>
+            <h2 id="work-title">
+              Products I&apos;ve <em>built</em>
+              <br />
+              and shipped.
+            </h2>
           </div>
           <p className="section-lead">
-            Products and platforms I have designed, built, and shipped — commerce, trading, chat, data, and team-scale backends.
+            Commerce, realtime trading, chat, payments, and team-scale backends — the systems behind production user experiences.
           </p>
         </header>
 
-        <div className="feature-grid">
+        <div className="product-featured">
           {featured.map((item) => (
-            <article key={item.name} className="feature-card">
-              <CaseHeader item={item} featured />
-              <p>{item.summary}</p>
-              {item.points ? (
-                <ul>
-                  {item.points.map((point) => (
-                    <li key={point}>{point}</li>
-                  ))}
-                </ul>
-              ) : null}
-              <Stack items={item.stack} />
-            </article>
+            <ProductCard key={item.name} item={item} featured />
           ))}
         </div>
 
-        <div className="work-grid">
-          {work.map((item, index) => (
-            <article key={item.name} className="work-card">
-              <div>
-                <p className="card-index">{String(index + 1).padStart(2, "0")}</p>
-                <CaseHeader item={item} />
-                <p>{item.summary}</p>
-              </div>
-              <Stack items={item.stack} />
-            </article>
+        <div className="product-grid">
+          {work.map((item) => (
+            <ProductCard key={item.name} item={item} />
           ))}
         </div>
       </div>
@@ -77,25 +34,24 @@ export function Work() {
   );
 }
 
-function CaseHeader({ item, featured = false }: { item: CaseStudy; featured?: boolean }) {
-  return (
-    <header className={featured ? "case-head is-featured" : "case-head"}>
-      <h3>{item.name}</h3>
-      <p>
-        {item.org}
-        <span> · </span>
-        {item.period}
-      </p>
-    </header>
-  );
-}
+function ProductCard({ item, featured = false }: { item: CaseStudy; featured?: boolean }) {
+  const Tag = item.href ? "a" : "article";
+  const linkProps = item.href
+    ? { href: item.href, target: "_blank", rel: "noreferrer" as const }
+    : {};
 
-function Stack({ items }: { items: string[] }) {
   return (
-    <ul className="stack">
-      {items.map((item) => (
-        <li key={item}>{item}</li>
-      ))}
-    </ul>
+    <Tag className={featured ? "product-card is-featured" : "product-card"} {...linkProps}>
+      <p className="product-kicker">{item.org}</p>
+      <h3>{item.name}</h3>
+      <p className="product-period">{item.period}</p>
+      <p className="product-summary">{item.summary}</p>
+      <ul className="stack">
+        {item.stack.map((s) => (
+          <li key={s}>{s}</li>
+        ))}
+      </ul>
+      {item.href ? <span className="product-cta">View profile ↗</span> : null}
+    </Tag>
   );
 }
