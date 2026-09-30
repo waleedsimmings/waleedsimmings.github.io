@@ -1,4 +1,5 @@
-import { heroCard, profile, proof } from "@/lib/content";
+import Image from "next/image";
+import { heroCard, profile } from "@/lib/content";
 
 export function Hero() {
   return (
@@ -19,9 +20,9 @@ export function Hero() {
             id="hero-title"
             className="font-display text-[clamp(3.5rem,11vw,7.5rem)] font-black uppercase leading-[0.82] tracking-[-0.075em] text-ink"
           >
-            Shipping
+            {profile.firstName}
             <br />
-            <span className="text-accent [text-shadow:0_1px_0_#6ca600]">Products.</span>
+            <span className="text-accent [text-shadow:0_1px_0_#6ca600]">{profile.lastName}.</span>
           </h1>
           <p className="mt-8 max-w-[48ch] text-[0.95rem] font-light leading-relaxed text-muted md:text-base">
             {profile.summary}
@@ -58,11 +59,16 @@ export function Hero() {
 
         <div className="relative z-10 mt-2 h-[560px] sm:h-[650px] lg:mt-0 lg:h-[760px]">
           <div className="absolute inset-x-[8%] bottom-8 top-0">
-            <div className="hero-ring portrait-panel relative mx-auto flex h-full max-h-[560px] w-full max-w-[560px] items-end justify-center overflow-hidden rounded-[2rem] lg:max-h-[760px] lg:max-w-[560px]">
-              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_100%,#a8ff2418,transparent_55%)]" />
-              <p className="font-display pb-16 text-[8rem] font-black leading-none tracking-[-0.08em] text-ink/15 lg:text-[10rem]">
-                WT
-              </p>
+            <div className="hero-ring portrait-panel relative mx-auto h-full max-h-[560px] w-full max-w-[560px] overflow-hidden rounded-[2rem] lg:max-h-[760px] lg:max-w-[560px]">
+              <div className="pointer-events-none absolute inset-0 z-10 bg-[radial-gradient(circle_at_50%_100%,#a8ff2418,transparent_55%)]" />
+              <Image
+                src="/waleed-portrait.jpg"
+                alt={profile.name}
+                width={560}
+                height={700}
+                className="hero-portrait"
+                priority
+              />
             </div>
           </div>
 
@@ -85,21 +91,6 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="relative z-20 mt-4 grid grid-cols-2 gap-px md:grid-cols-4">
-        {proof.map((item) => (
-          <div
-            key={item.index}
-            className="bg-surface/70 px-5 py-5 transition-colors hover:bg-surface md:px-7 md:py-6"
-          >
-            <div className="flex items-start justify-between">
-              <span className="text-[0.62rem] font-black text-accent">{item.index}</span>
-              <span className="text-[0.58rem] uppercase tracking-widest text-muted">{item.label}</span>
-            </div>
-            <p className="mt-4 font-display text-3xl font-black text-ink">{item.value}</p>
-            <p className="mt-1 text-[0.68rem] uppercase tracking-wider text-muted">{item.detail}</p>
-          </div>
-        ))}
-      </div>
     </section>
   );
 }

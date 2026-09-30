@@ -105,6 +105,16 @@ body {
     linear-gradient(165deg, rgb(var(--color-surface)), rgb(var(--color-card)));
 }
 
+.hero-portrait {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: grayscale(1) contrast(1.08);
+  -webkit-mask-image: linear-gradient(#000 0% 88%, transparent 100%);
+  mask-image: linear-gradient(#000 0% 88%, transparent 100%);
+}
+
 @keyframes pulse-dot {
   0%,
   100% {
