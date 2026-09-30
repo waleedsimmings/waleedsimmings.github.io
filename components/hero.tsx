@@ -62,7 +62,7 @@ export function Hero() {
             <div className="hero-ring portrait-panel relative mx-auto h-full max-h-[560px] w-full max-w-[560px] overflow-hidden rounded-[2rem] lg:max-h-[760px] lg:max-w-[560px]">
               <div className="pointer-events-none absolute inset-0 z-10 bg-[radial-gradient(circle_at_50%_100%,#a8ff2418,transparent_55%)]" />
               <Image
-                src="/waleed-portrait.jpg"
+                src="/waleed-portrait.jpeg"
                 alt={profile.name}
                 width={560}
                 height={700}
