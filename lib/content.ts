@@ -21,8 +21,8 @@ export const nav = [
   { href: "#about", label: "About" },
   { href: "#work", label: "Work" },
   { href: "#experience", label: "Experience" },
+  { href: "#methodology", label: "Methodology" },
   { href: "#skills", label: "Skills" },
-  { href: "#contact", label: "Contact" },
 ];
 
 export const heroCard = {
